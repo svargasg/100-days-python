@@ -1,8 +1,9 @@
 from turtle import Turtle
 
-INI_POSITIONS = [(0,0), (-20,0), (-40,0)]
+INI_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DIST = 20
 UP, DOWN, LEFT, RIGHT = 90, 270, 180, 0
+
 
 class Snake:
     def __init__(self) -> None:
@@ -20,10 +21,10 @@ class Snake:
         seg.penup()
         seg.goto(position)
         self.segments.append(seg)
-    
+
     def extend(self):
         self.add_segment(self.segments[-1].position())
-    
+
     def move(self):
         for seg_n in range(len(self.segments) - 1, 0, -1):
             nx = self.segments[seg_n - 1].xcor()
