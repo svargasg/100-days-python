@@ -1,7 +1,7 @@
 from turtle import Turtle
 
-class Paddle(Turtle):
 
+class Paddle(Turtle):
     def __init__(self, position) -> None:
         super().__init__()
         self.shape("square")
